@@ -15,10 +15,7 @@ cache:
 script:
   - echo "helloworld"
   - hostname
-  - cd .travis
   - bash merge_if_success.sh
-  - cd -
-
 
 env:
   global:
