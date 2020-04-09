@@ -153,7 +153,7 @@ def merge_to_develop_branch(branch_to_merge, cwd):
 def merge_to_pre_merge_master_branch(branch_to_merge, cwd):
   create_branch_if_not_exist('testingbranch', cwd)
   print('findme1')
-  run_command("git push", cwd)
+  # run_command("git push", cwd)
   # push_commit(PUSH_URI, 'testingbranch', cwd)
   # run_command('git merge --ff-only "{}"'.format(branch_to_merge), cwd)
 
