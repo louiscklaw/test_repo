@@ -228,10 +228,10 @@ def process_develop_branch(PUSH_URI, pre_merge_branch_in, cwd, no_push_uri = Fal
   run_command('git clone {} .'.format(PUSH_URI), cwd)
   merge_to_pre_merge_master_branch(pre_merge_branch_in, cwd)
 
-  if no_push_uri:
-    print('no pushing commit as no_push_uri is true')
-  else:
-    push_commit(PUSH_URI, 'pre-merge-master', cwd)
+  # if no_push_uri:
+  #   print('no pushing commit as no_push_uri is true')
+  # else:
+  #   push_commit(PUSH_URI, 'pre-merge-master', cwd)
 
 
 def process_pre_merge_master_branch(PUSH_URI, pre_merge_branch_in, cwd, no_push_uri = False):
