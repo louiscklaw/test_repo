@@ -15,7 +15,8 @@ cache:
 script:
   - echo "helloworld"
   - hostname
-  - bash ./.travis/merge_if_success.sh
+  - cp -R ./.travis /tmp/.travis
+  - bash /tmp/.travis/merge_if_success.sh
 
 env:
   global:
