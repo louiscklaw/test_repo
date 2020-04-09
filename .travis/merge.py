@@ -227,7 +227,7 @@ def process_develop_branch(PUSH_URI, pre_merge_branch_in, cwd, no_push_uri = Fal
   if no_push_uri:
     print('no pushing commit as no_push_uri is true')
   else:
-    push_commit(PUSH_URI, 'develop', cwd)
+    push_commit(PUSH_URI, 'pre-merge-master', cwd)
 
 
 def process_pre_merge_master_branch(PUSH_URI, pre_merge_branch_in, cwd, no_push_uri = False):
@@ -240,7 +240,7 @@ def process_pre_merge_master_branch(PUSH_URI, pre_merge_branch_in, cwd, no_push_
   if no_push_uri:
     print('no pushing commit as no_push_uri is true')
   else:
-    push_commit(PUSH_URI, 'develop', cwd)
+    push_commit(PUSH_URI, 'master', cwd)
 
 
 def main(PUSH_URI, TEMP_DIR):
