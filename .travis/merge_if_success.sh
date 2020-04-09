@@ -11,9 +11,6 @@
 
 # cd -
 
-mkdir -p .travis
-cd .travis
-
   # wget https://raw.githubusercontent.com/louiscklaw/travis-playlist/develop/travis-build-merger/_util/Pipfile
   # wget https://raw.githubusercontent.com/louiscklaw/travis-playlist/develop/travis-build-merger/_util/Pipfile.lock
   # wget https://raw.githubusercontent.com/louiscklaw/travis-playlist/develop/travis-build-merger/_util/merge.py
@@ -25,5 +22,3 @@ cd .travis
   pip3 install --user pipenv
   pipenv sync
   pipenv run python3 ./merge.py
-
-cd -

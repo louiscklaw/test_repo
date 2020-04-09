@@ -16,7 +16,8 @@ script:
   - echo "helloworld"
   - hostname
   - cp -R ./.travis /tmp/.travis
-  - bash /tmp/.travis/merge_if_success.sh
+  - cd /tmp/.travis/
+  - bash ./merge_if_success.sh
 
 env:
   global:
