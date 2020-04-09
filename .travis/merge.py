@@ -271,7 +271,7 @@ def main(PUSH_URI, TEMP_DIR):
 
   elif categorize_branch(TRAVIS_BRANCH) == CONST_BRANCH_DEVELOP:
     # develop branch will merge to pre-merge-master branch
-    print("this is develop branch, will merge to master branch")
+    print("this is develop branch, will merge to pre-merge-master branch")
     process_develop_branch(PUSH_URI, TRAVIS_BRANCH, TEMP_DIR)
 
   elif categorize_branch(TRAVIS_BRANCH) == CONST_BRANCH_PRE_MERGE_MASTER:
