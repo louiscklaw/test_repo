@@ -151,11 +151,19 @@ def merge_to_develop_branch(branch_to_merge, cwd):
 
 
 def merge_to_pre_merge_master_branch(branch_to_merge, cwd):
-  create_branch_if_not_exist('pre-merge-master', cwd)
-  print('findme1')
+  # create_branch_if_not_exist('pre-merge-master', cwd)
+  # print('findme1')
+  # push_commit(PUSH_URI, 'pre-merge-master', cwd)
+
   # run_command("git push", cwd)
-  push_commit(PUSH_URI, 'pre-merge-master', cwd)
   # run_command('git merge --ff-only "{}"'.format(branch_to_merge), cwd)
+
+  run_command("git checkout master", cwd)
+  run_command('git branch -D pre-merge-master', cwd)
+  run_command('git checkout -b pre-merge-master', cwd)
+  run_command('git merge develop',cwd)
+  run_command('git push',cwd)
+
 
 def merge_to_master_branch(branch_to_merge, cwd):
   checkout_branch('master', cwd)
