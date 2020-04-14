@@ -159,7 +159,7 @@ def merge_to_pre_merge_master_branch(branch_to_merge, cwd):
   # run_command('git merge --ff-only "{}"'.format(branch_to_merge), cwd)
 
   run_command("git checkout master", cwd)
-  run_command('git branch -D pre-merge-master', cwd)
+  # run_command('git branch -D pre-merge-master', cwd)
   run_command('git checkout -b pre-merge-master', cwd)
   run_command('git merge develop',cwd)
   run_command('git push',cwd)
