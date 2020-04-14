@@ -164,7 +164,7 @@ def merge_to_pre_merge_master_branch(branch_to_merge, cwd):
   run_command('git merge --strategy-option theirs -m"pre-merge-master from develop and use theirs for test," origin/develop',cwd)
   run_command('git branch', cwd)
   run_command('git status',cwd)
-  run_command('git push',cwd)
+  run_command('git push --set-upstream origin pre-merge-master',cwd)
 
 
 def merge_to_master_branch(branch_to_merge, cwd):
