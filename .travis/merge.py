@@ -169,8 +169,7 @@ def merge_to_pre_merge_master_branch(branch_to_merge, cwd):
 
 def merge_to_master_branch(branch_to_merge, cwd):
   checkout_branch('master', cwd)
-  print('findme')
-  # run_command('git merge --ff-only "{}"'.format(branch_to_merge), cwd)
+  run_command('git merge --ff-only "{}"'.format(branch_to_merge), cwd)
 
 
 def process_test_branch(PUSH_URI, test_branch_name, cwd, no_push_uri = False):
